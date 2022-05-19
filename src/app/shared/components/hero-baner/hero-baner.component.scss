@@ -1,0 +1,44 @@
+:host{
+   .bg-img{
+  width: 100%;
+  background-image: url('/assets/img/bg-market-2.jpg');
+  background-repeat    : no-repeat;
+  background-size      : cover;
+  // background-position  : center;
+  background-attachment: fixed;
+   //background-attachment:scroll !important;
+  min-height           : 1000px;
+  position             : relative;
+  overflow: auto;
+  .sub-section-1 {
+      width: 50%;
+      height: 280px;
+      background-color: aliceblue;
+      text-align: center;
+      position: absolute;
+      left: 20vw;
+      top:30vh;
+      opacity: 0.9;
+      padding: 25px;
+      overflow: auto;
+      border-radius: 50px;
+
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 1.2vw;
+      line-height: normal;
+    }
+  }
+  .custom-btn{
+    opacity: 1 !important;
+    border-radius: 7px;
+  }
+}
+.wrapper{
+  height: 500px;
+}
+}
