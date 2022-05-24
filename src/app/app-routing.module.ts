@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     // canActivate: [AuthorizedGuard],
     loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule)
-   }
+   },
+   { path: 'auth',
+    // canActivate: [UnauthorizedGuard],
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
   // // {
   // //   path: 'company',
   // //   //canActivate: [AuthorizedGuard,

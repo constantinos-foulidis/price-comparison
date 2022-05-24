@@ -7,21 +7,26 @@ import { ApplicationRootViewComponent } from './application-root-view/applicatio
 import { SharedModule } from '../shared/shared.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { SearchComponent } from './components/search/search.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
 @NgModule({
   declarations: [
     ApplicationComponent,
-    ApplicationRootViewComponent
+    ApplicationRootViewComponent,
+    SearchComponent,
   ],
   imports: [
     CommonModule,
     ApplicationRoutingModule,
     SharedModule,
     MatToolbarModule,
-    FlexLayoutModule
-
+    FlexLayoutModule,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class ApplicationModule { }

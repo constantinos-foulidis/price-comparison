@@ -1,18 +1,19 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="openSideNav()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <span>My App</span>
+  <span class="mr-75px">Market Price Compare</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+
+  <a routerLink="/application/search" [routerLinkActive]="['active']">
+    Search Deals
+  </a>
+
+  <div class="pull-right">
+    <a routerLink="search" [routerLinkActive]="['active']">
+      Login
+    </a>
+    <a routerLink="auth/register" [routerLinkActive]="['active']">
+      Register
+    </a>
+  </div>
 </mat-toolbar>
 
 <!-- <app-sidenav [showFilter]="showFilter" (drawer)="openSideNav()" #TEST></app-sidenav> -->
-
-

@@ -4,21 +4,19 @@
   background-image: url('/assets/img/bg-market-2.jpg');
   background-repeat    : no-repeat;
   background-size      : cover;
+
   // background-position  : center;
   background-attachment: fixed;
    //background-attachment:scroll !important;
-  min-height           : 1000px;
-  position             : relative;
+  min-height           : 800px;
+  //position             : relative;
   overflow: auto;
   .sub-section-1 {
       width: 50%;
       height: 280px;
       background-color: aliceblue;
       text-align: center;
-      position: absolute;
-      left: 20vw;
-      top:30vh;
-      opacity: 0.9;
+      opacity: 0.95;
       padding: 25px;
       overflow: auto;
       border-radius: 50px;
@@ -37,6 +35,19 @@
     opacity: 1 !important;
     border-radius: 7px;
   }
+}
+.bg-img::before {
+
+
+    position: absolute;
+    width : 100%;
+    height: 100%;
+
+    transition        : all 2s linear;
+    -moz-transition   : all 2s linear;
+    -webkit-transition: all 2s linear;
+    -o-transition     : all 2s linear;
+
 }
 .wrapper{
   height: 500px;

@@ -10,6 +10,9 @@ import { HeroBanerComponent } from './components/hero-baner/hero-baner.component
 import { AboutComponent } from './components/about/about.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { RegisterSuggestComponent } from './components/register-suggest/register-suggest.component';
+
 
 
 
@@ -20,13 +23,15 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroBanerComponent,
     AboutComponent,
     FooterComponent,
+    RegisterSuggestComponent,
 
   ],
   exports: [
     TopToolbarComponent,
     HeroBanerComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterSuggestComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +39,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
