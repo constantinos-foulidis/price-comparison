@@ -11,12 +11,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './containers/login/login.component';
 
 
 @NgModule({
   declarations: [
     RegisterComponent,
-    AuthviewComponent
+    AuthviewComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

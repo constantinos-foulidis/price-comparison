@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { RegisterSuggestComponent } from './components/register-suggest/register-suggest.component';
+import { CircleShopComponent } from './components/circle-shop/circle-shop.component';
+import { CaruselComponent } from './components/carusel/carusel.component';
 
 
 
@@ -24,6 +26,8 @@ import { RegisterSuggestComponent } from './components/register-suggest/register
     AboutComponent,
     FooterComponent,
     RegisterSuggestComponent,
+    CircleShopComponent,
+    CaruselComponent,
 
   ],
   exports: [
@@ -31,7 +35,8 @@ import { RegisterSuggestComponent } from './components/register-suggest/register
     HeroBanerComponent,
     AboutComponent,
     FooterComponent,
-    RegisterSuggestComponent
+    RegisterSuggestComponent,
+    CaruselComponent
   ],
   imports: [
     CommonModule,

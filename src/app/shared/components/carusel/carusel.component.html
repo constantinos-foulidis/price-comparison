@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly center" class="w-80 h-300px ml-5" fxLayoutGap="100px">
+
+    <ng-container *ngFor="let item of data">
+      <app-circle-shop [src]="item.src" [alt]="item.alt" (clicked)="goToSpesificOffers()"></app-circle-shop>
+    </ng-container>
+</div>
+<div class="arrow-wrapper">
+  <mat-icon class="positioning-left" aria-hidden="false" aria-label="Example chevron_l icon">chevron_left</mat-icon>
+  <mat-icon class="positioning-right" aria-hidden="false" aria-label="Example chevron_r icon">chevron_right</mat-icon>
+</div>

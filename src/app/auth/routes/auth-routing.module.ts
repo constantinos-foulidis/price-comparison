@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from '../containers/login/login.component';
 import { RegisterComponent } from '../containers/register/register.component';
 import { AuthviewComponent } from '../view/authview/authview.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
       //   ]
       // },
       {path: 'register', pathMatch: 'full', component: RegisterComponent},
+      {path: 'login', pathMatch: 'full', component: LoginComponent},
 
     ]
   }
