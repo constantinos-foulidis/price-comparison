@@ -1,4 +1,5 @@
-import { Component, OnInit,Input, ViewChild, ElementRef,Renderer2 } from '@angular/core';
+import { Component, OnInit,Input, ViewChild, ElementRef } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-carusel',
@@ -8,8 +9,17 @@ import { Component, OnInit,Input, ViewChild, ElementRef,Renderer2 } from '@angul
 export class CaruselComponent implements OnInit {
   @ViewChild('test')test: ElementRef | undefined;
   @Input() data:any
-  translate: number = 200;
-  constructor(private render:Renderer2) { }
+  constructor() { }
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 800,
+    navText: ['', ''],
+    nav: true
+  }
 
   ngOnInit(): void {
   }
@@ -17,17 +27,4 @@ export class CaruselComponent implements OnInit {
 
   }
 
-  goLeft(){
-    this.translate = this.translate-200;
-    console.log(this.translate);
-    this.render.setStyle(this.test?.nativeElement, 'transform', `translateX(${this.translate})`);
-
-  }
-  goRight(){
-    this.translate = this.translate+200;
-    console.log(this.translate);
-    console.log(this.test);
-    this.render.setStyle(this.test?.nativeElement, 'transform', `translateX(${this.translate})`);
-
-  }
 }

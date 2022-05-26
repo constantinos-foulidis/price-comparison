@@ -14,9 +14,9 @@ import { RouterModule } from '@angular/router';
 import { RegisterSuggestComponent } from './components/register-suggest/register-suggest.component';
 import { CircleShopComponent } from './components/circle-shop/circle-shop.component';
 import { CaruselComponent } from './components/carusel/carusel.component';
-
-
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DealCardComponent } from './components/deal-card/deal-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { CaruselComponent } from './components/carusel/carusel.component';
     RegisterSuggestComponent,
     CircleShopComponent,
     CaruselComponent,
-
+    DealCardComponent,
   ],
   exports: [
     TopToolbarComponent,
@@ -36,7 +36,8 @@ import { CaruselComponent } from './components/carusel/carusel.component';
     AboutComponent,
     FooterComponent,
     RegisterSuggestComponent,
-    CaruselComponent
+    CaruselComponent,
+    DealCardComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +46,9 @@ import { CaruselComponent } from './components/carusel/carusel.component';
     MatButtonModule,
     MatSidenavModule,
     FlexLayoutModule,
-    RouterModule
-  ]
+    RouterModule,
+    CarouselModule,
+    MatCardModule
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -1,10 +1,13 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-evenly center" class="w-80 h-300px ml-5" fxLayoutGap="100px">
+<div class="h-100" fxLayout="column " fxLayoutAlign="center center">
+  <h1 class="mb-5">Unique deals for spesific super market</h1>
+  <owl-carousel-o [options]="customOptions"  class="w-100">
 
     <ng-container *ngFor="let item of data">
-      <app-circle-shop [src]="item.src" [alt]="item.alt" (clicked)="goToSpesificOffers()"></app-circle-shop>
+      <ng-template carouselSlide [id]="item.id" autoWidth=true>
+        <app-circle-shop [src]="item.src" [alt]="item.alt" (clicked)="goToSpesificOffers()"></app-circle-shop>
+        <!-- <img [src]="item.src" [alt]="item.alt" > -->
+      </ng-template>
     </ng-container>
-</div>
-<div class="arrow-wrapper">
-  <mat-icon class="positioning-left" aria-hidden="false" aria-label="Example chevron_l icon">chevron_left</mat-icon>
-  <mat-icon class="positioning-right" aria-hidden="false" aria-label="Example chevron_r icon">chevron_right</mat-icon>
+
+  </owl-carousel-o>
 </div>
