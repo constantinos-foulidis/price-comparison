@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoreService } from 'src/app/service/core.service';
 
 @Component({
   selector: 'app-search',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  movies: any = [];
   data:any = [
     { id:1,
       src:'/assets/img/lidl.png',
@@ -56,9 +58,12 @@ export class SearchComponent implements OnInit {
       alt:'ab',
     }
 ];
-  constructor() { }
+  constructor(private coreSercive: CoreService) { }
 
   ngOnInit(): void {
+     this.coreSercive.getMovies().subscribe(data => {
+        this.movies = data;
+     })
   }
 
 }

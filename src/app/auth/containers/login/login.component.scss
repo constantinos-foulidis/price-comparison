@@ -1,0 +1,23 @@
+
+.bg-wp{
+  width: 100%;
+  height: 200px;
+  background-image: url('/assets/img/login-bg.jpg');
+  background-repeat    : no-repeat;
+  background-size      : cover;
+
+  // background-position  : center;
+  background-attachment: fixed;
+   //background-attachment:scroll !important;
+  min-height           : 800px;
+  .subWrapper{
+    margin-top: 200px;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 40px;
+    }
+
+
+
+  }

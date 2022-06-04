@@ -1,15 +1,12 @@
-<div class="h-450px">
+<!-- <div class="h-450px">
 <app-carusel [data]="data"></app-carusel>
-</div>
+</div> -->
 <!-- filters -->
 <!-- Show products -->
 <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" >
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
-<app-deal-card></app-deal-card>
+
+  <div  *ngFor="let movie of movies" >
+    <app-deal-card [data]="movie"></app-deal-card>
+  </div>
+
 </div>

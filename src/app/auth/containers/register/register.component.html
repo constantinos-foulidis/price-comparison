@@ -13,15 +13,6 @@
             Name is <strong>required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Enter your surname</mat-label>
-          <input matInput placeholder="surname" formControlName="surname" required>
-          <mat-error *ngIf="registerForm.get('password')?.hasError('maxlength')">surname must be lower than 20 chars
-          </mat-error>
-          <mat-error *ngIf="registerForm.get('surname')?.hasError('required')">
-            Surname is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
       </div>
       <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="30px">
         <mat-form-field appearance="fill">
