@@ -1,0 +1,12 @@
+
+<h1 mat-dialog-title>{{data.Title}}</h1>
+<div mat-dialog-content>
+  <h2>Vote me !</h2>
+  <div class="cont">
+    <div class="stars">
+      <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" ></ngx-star-rating >
+    </div>
+    <div>Rating: {{ rating3 }}</div>
+  </div>
+</div>
+<button mat-button (click)="save()">Save</button>

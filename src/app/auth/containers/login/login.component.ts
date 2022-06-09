@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthuserService } from '../../../service/authuser.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm = new FormGroup({});
   hide = true;
 
-  constructor(private authuserService:AuthuserService ) { }
+  constructor(private authuserService:AuthuserService) { }
 
   ngOnInit(): void {
     this.initLogin();
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmit(e: Event): void {
       e.preventDefault();
       this.authuserService.login(this.loginForm.value).subscribe( test => {
-         console.log('test', test);
+
       });
   }
 

@@ -5,8 +5,8 @@
 <!-- Show products -->
 <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" >
 
-  <div  *ngFor="let movie of movies" >
-    <app-deal-card [data]="movie"></app-deal-card>
+  <div class="mt-5 mb-5"  *ngFor="let movie of movies" >
+    <app-deal-card [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)"></app-deal-card>
   </div>
 
 </div>

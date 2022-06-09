@@ -17,6 +17,22 @@ import { CaruselComponent } from './components/carusel/carusel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DealCardComponent } from './components/deal-card/deal-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { PlayerComponent } from './components/player/player.component';
+import {VgCoreModule} from '@videogular/ngx-videogular/core';
+import {VgControlsModule} from '@videogular/ngx-videogular/controls';
+import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
+import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
+import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
+//import {SingleMediaPlayer} from './single-media-player';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ReviewComponent } from './components/review/review.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VotechartComponent } from './components/votechart/votechart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +45,11 @@ import { MatCardModule } from '@angular/material/card';
     CircleShopComponent,
     CaruselComponent,
     DealCardComponent,
+    PlayerComponent,
+    MessageDialogComponent,
+    ReviewComponent,
+    VotechartComponent,
+
   ],
   exports: [
     TopToolbarComponent,
@@ -37,7 +58,15 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent,
     RegisterSuggestComponent,
     CaruselComponent,
-    DealCardComponent
+    DealCardComponent,
+    PlayerComponent,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    ReviewComponent,
+    VotechartComponent
+
   ],
   imports: [
     CommonModule,
@@ -48,7 +77,18 @@ import { MatCardModule } from '@angular/material/card';
     FlexLayoutModule,
     RouterModule,
     CarouselModule,
-    MatCardModule
+    MatCardModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    NgxStarRatingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxChartsModule
+
   ],
 })
 export class SharedModule {}

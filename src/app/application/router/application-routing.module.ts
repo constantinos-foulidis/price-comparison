@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApplicationRootViewComponent } from '../application-root-view/application-root-view.component';
 import { SearchComponent } from '../components/search/search.component';
+import { VotesComponent } from '../components/votes/votes.component';
 import { ApplicationComponent } from '../container/application/application.component';
 
 
@@ -11,6 +12,12 @@ const routes: Routes = [
       // Routes without selected application
       {path: '', pathMatch: 'full', component: ApplicationComponent }, // Never Navigate to this route
       {path: 'application/search', component: SearchComponent },
+      {path: 'application/votes', component: VotesComponent },
+      {
+              path: 'profile',
+              //canActivate: [SelectedApplicationGuard],
+              loadChildren: () => import('../profile/profile.module').then(m => m.ProfileModule)
+            }
       // {
       //   path: 'application',
       //   component: ApplicationViewComponent,

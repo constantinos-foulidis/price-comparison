@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav/drawer';
+import { SeessionStorageService } from 'src/app/service/seession-storage.service';
 
 @Component({
   selector: 'app-top-toolbar',
@@ -10,13 +11,18 @@ export class TopToolbarComponent implements OnInit {
   //@ViewChild('TEST', { static: true }) public drawer!: any | undefined;
   showFilter: boolean = false;
 
-  constructor() { }
+  constructor(private sStorage:SeessionStorageService) { }
 
   ngOnInit(): void {
   }
   openSideNav(){
     // this.showFilter = !this.showFilter;
-    // console.log(this.drawer);
     // this.drawer?.drawer?.toggle();
+  }
+  hasUserRights(): boolean{
+     return this.sStorage.getItem('status') === 'true' ? true : false;
+  }
+  logOut(){
+    this.sStorage.removeItem('status');
   }
 }

@@ -10,6 +10,12 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { SearchComponent } from './components/search/search.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { VotesComponent } from './components/votes/votes.component';
+
+
+
 
 
 
@@ -18,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     ApplicationComponent,
     ApplicationRootViewComponent,
     SearchComponent,
+    VotesComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +34,10 @@ import { MatButtonModule } from '@angular/material/button';
     FlexLayoutModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule
+  ],
+  providers:[
+    { provide: MAT_DIALOG_DATA, useValue: {} },
   ]
 })
 export class ApplicationModule { }

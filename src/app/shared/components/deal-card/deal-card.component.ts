@@ -1,4 +1,8 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
+import { CoreService } from 'src/app/service/core.service';
+import { SeessionStorageService } from 'src/app/service/seession-storage.service';
+
 
 @Component({
   selector: 'app-deal-card',
@@ -7,10 +11,56 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class DealCardComponent implements OnInit {
    @Input() data:any
-  constructor() { }
+   @Output() clicked = new EventEmitter<MouseEvent>();
+   @Output() reviewClicked = new EventEmitter<MouseEvent>();
+
+  constructor(private coreService: CoreService,private sStorage: SeessionStorageService) { }
 
   ngOnInit(): void {
-    console.log(this.data);
   }
+  updateMovies(){
+    let favor:any = [];
+    if(this.sStorage.getItem('favorites') == 'undefined' ){
+      favor = [];
+    }else{
+      favor =  this.sStorage.getItem('favorites')?.split(',');
+    }
 
+    favor.push(this.data._id);
+
+    let data = {
+      username: this.sStorage.getItem('username'),
+      email: this.sStorage.getItem('email'),
+      password: this.sStorage.getItem('password'),
+      favorites: favor
+    }
+    this.coreService.updateMovies(data).subscribe(test =>{
+         if(test.complete){
+            this.data.liked = true;
+            this.sStorage.removeItem('favorites');
+            this.sStorage.setItem('favorites',test.user.favorites);
+         }
+    });
+  }
+  removeMovies(){
+    let favor:any = []
+    favor = this.sStorage.getItem('favorites')?.split(',');
+
+    favor = favor.filter((value:any) => value !== this.data._id);
+    let data = {
+      username: this.sStorage.getItem('username'),
+      email: this.sStorage.getItem('email'),
+      password: this.sStorage.getItem('password'),
+      favorites: favor
+    }
+    this.coreService.updateMovies(data).subscribe(test => {
+      if(test.complete){
+        this.data.liked = false;
+        this.sStorage.setItem('favorites',test.user.favorites);
+     }
+    })
+  }
+  openReview(){
+
+  }
 }
