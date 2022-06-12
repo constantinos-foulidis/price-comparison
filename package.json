@@ -30,6 +30,7 @@
     "ngx-star-rating": "^2.1.0",
     "ngx-videogular": "^13.2.4",
     "popper.js": "^1.16.1",
+    "pusher-js": "^7.1.1-beta",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

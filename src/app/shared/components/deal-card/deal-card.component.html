@@ -1,12 +1,15 @@
 <mat-card class="example-card" >
   <div class="z-index" (click)="clicked.emit(data)">
   <mat-card-title-group  >
-    <mat-card-title > {{data.Title}}
+    <mat-card-title class="mb-2"> {{data.Title}}
     </mat-card-title>
 
     <mat-card-title class="font-size-24px mb-4">{{data.Actors}}</mat-card-title>
     <mat-card-subtitle class="prev-price-style space-between">{{data.Year}}</mat-card-subtitle>
-    <mat-card-subtitle class="font-size-30px">{{data.imdbRating}}</mat-card-subtitle>
+    <mat-card-subtitle class="font-size-30px">{{data.imdbRating}}
+    <img class="small-logo" src="/assets/img/imdb.png" >
+
+    </mat-card-subtitle>
     <img mat-card-xl-image src="http://ia.media-imdb.com/images/M/MV5BMTY2MjMwNDE4OV5BMl5BanBnXkFtZTgwNjI1NjU0OTE@._V1_SX300.jpg" >
 
   </mat-card-title-group>

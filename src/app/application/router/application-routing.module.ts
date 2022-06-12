@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApplicationRootViewComponent } from '../application-root-view/application-root-view.component';
+import { LivechatComponent } from '../components/livechat/livechat.component';
 import { SearchComponent } from '../components/search/search.component';
 import { VotesComponent } from '../components/votes/votes.component';
 import { ApplicationComponent } from '../container/application/application.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
       {path: '', pathMatch: 'full', component: ApplicationComponent }, // Never Navigate to this route
       {path: 'application/search', component: SearchComponent },
       {path: 'application/votes', component: VotesComponent },
+      {path: 'application/livechat', component: LivechatComponent },
       {
               path: 'profile',
               //canActivate: [SelectedApplicationGuard],

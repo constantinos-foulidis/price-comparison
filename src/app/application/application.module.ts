@@ -13,7 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { VotesComponent } from './components/votes/votes.component';
-
+import {MatInputModule} from '@angular/material/input';
+import { LivechatComponent } from './components/livechat/livechat.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -25,6 +28,7 @@ import { VotesComponent } from './components/votes/votes.component';
     ApplicationRootViewComponent,
     SearchComponent,
     VotesComponent,
+    LivechatComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,12 @@ import { VotesComponent } from './components/votes/votes.component';
     FlexLayoutModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    FormsModule
+
   ],
   providers:[
     { provide: MAT_DIALOG_DATA, useValue: {} },

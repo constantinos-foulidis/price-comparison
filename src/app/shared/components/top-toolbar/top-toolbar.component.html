@@ -5,7 +5,9 @@
   <a routerLink="/application/search" [routerLinkActive]="['active']">
     Search Movies
   </a>
-
+  <a *ngIf="hasUserRights()" class="ml-35px" routerLink="/application/livechat" [routerLinkActive]="['active']">
+    Live chat
+  </a>
   <div class="pull-right" *ngIf="!hasUserRights()" >
     <a routerLink="auth/login" [routerLinkActive]="['active']">
       Login

@@ -1,12 +1,19 @@
-<!-- <div class="h-450px">
-<app-carusel [data]="data"></app-carusel>
-</div> -->
+<div class="h-450px">
+
 <!-- filters -->
 <!-- Show products -->
+<div  fxLayout="column" class="container margin-top40px" fxLayoutAlign="space-evenly center" >
+  <mat-form-field appearance="fill" class="input-width">
+    <mat-label>Search</mat-label>
+    <input class="width-300" matInput   (input)="searchBooks($event)" placeholder="Search movies by Title" >
+  </mat-form-field>
+</div>
 <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" >
 
   <div class="mt-5 mb-5"  *ngFor="let movie of movies" >
     <app-deal-card [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)"></app-deal-card>
   </div>
+
+</div>
 
 </div>

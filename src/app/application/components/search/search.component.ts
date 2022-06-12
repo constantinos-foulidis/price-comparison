@@ -13,6 +13,7 @@ import { ReviewComponent } from 'src/app/shared/components/review/review.compone
 })
 export class SearchComponent implements OnInit {
   movies: any = [];
+  allmovies: any = [];
   data:any = [
     { id:1,
       src:'/assets/img/lidl.png',
@@ -79,8 +80,10 @@ export class SearchComponent implements OnInit {
               });
             })
           this.movies = data;
+          this.allmovies = data;
        }else{
         this.movies = data;
+        this.allmovies = data;
        }
      })
   }
@@ -133,5 +136,15 @@ export class SearchComponent implements OnInit {
     }
  }
 
+ searchBooks(search:any){
 
+  const value = (search.target as HTMLInputElement).value;
+  console.log(value);
+  if (this.allmovies.length > 0){
+    const temp =  this.allmovies.filter(movies => (movies.Title.toLowerCase().includes(value.toLowerCase())));
+
+      this.movies = temp;
+  }
+
+ }
 }
