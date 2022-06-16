@@ -141,7 +141,8 @@ export class SearchComponent implements OnInit {
   const value = (search.target as HTMLInputElement).value;
   console.log(value);
   if (this.allmovies.length > 0){
-    const temp =  this.allmovies.filter(movies => (movies.Title.toLowerCase().includes(value.toLowerCase())));
+    const temp =  this.allmovies.filter(movies => (movies.Title.toLowerCase().includes(value.toLowerCase()) ||
+                                                    movies.Actors.toLowerCase().includes(value.toLocaleLowerCase())));
 
       this.movies = temp;
   }
