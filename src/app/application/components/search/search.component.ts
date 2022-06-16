@@ -147,4 +147,21 @@ export class SearchComponent implements OnInit {
   }
 
  }
+ filterByCategory(category:any){
+  console.log(category);
+  console.log(this.allmovies);
+
+  if (this.allmovies.length > 0){
+    const temp =  this.allmovies.filter(item =>{
+          return item.Genre.find(genre => genre.toLowerCase().includes(category.toLowerCase()))
+
+    });
+
+      this.movies = temp;
+      console.log(this.movies.length)
+  }
+ }
+ fillMovies(){
+   this.movies = this.allmovies;
+ }
 }

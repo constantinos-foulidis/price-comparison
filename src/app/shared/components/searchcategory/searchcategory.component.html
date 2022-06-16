@@ -1,0 +1,24 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="text-white">
+       Search By category
+      </mat-panel-title>
+      <mat-panel-description class="text-white">
+        What do you wanna watch
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="30px">
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Action')">Action</button>
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Drama')">Drama</button>
+
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Sci-fi')">Sci-fi</button>
+
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Sports')">Sports</button>
+
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Documentary')">Documentary</button>
+
+    <button class="min-with" mat-flat-button (click)="clicked.emit('Horror')">Horror</button>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

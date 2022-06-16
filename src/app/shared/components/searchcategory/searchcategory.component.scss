@@ -1,0 +1,13 @@
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.min-with{
+  min-width: 200px;
+}
+:host{
+  ::ng-deep .mat-expansion-panel {
+    background-color: #3F3C3D;
+    border-radius: 0 !important;
+  }
+
+}

@@ -1,6 +1,7 @@
 <div class="h-450px">
 
 <!-- filters -->
+<app-searchcategory (clicked)="filterByCategory($event)"></app-searchcategory>
 <!-- Show products -->
 <div  fxLayout="column" class="container margin-top40px" fxLayoutAlign="space-evenly center" >
   <mat-form-field appearance="fill" class="input-width">
@@ -14,6 +15,10 @@
     <app-deal-card [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)"></app-deal-card>
   </div>
 
+</div>
+<div fxLayout="column" fxLayoutAlign="space-evenly center" *ngIf="movies.length == 0">
+  <h1>Movies not found</h1>
+  <button class="min-with" mat-flat-button (click)="fillMovies()" color="warn">Return</button>
 </div>
 
 </div>

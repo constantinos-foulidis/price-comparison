@@ -31,6 +31,8 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VotechartComponent } from './components/votechart/votechart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { SearchcategoryComponent } from './components/searchcategory/searchcategory.component';
 
 
 
@@ -49,6 +51,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MessageDialogComponent,
     ReviewComponent,
     VotechartComponent,
+    SearchcategoryComponent,
 
   ],
   exports: [
@@ -65,7 +68,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     VgOverlayPlayModule,
     VgBufferingModule,
     ReviewComponent,
-    VotechartComponent
+    VotechartComponent,
+    SearchcategoryComponent
 
   ],
   imports: [
@@ -87,7 +91,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxStarRatingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatExpansionModule
 
   ],
 })
