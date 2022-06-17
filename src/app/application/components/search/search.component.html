@@ -1,4 +1,4 @@
-<div class="h-450px">
+<div [class]="movies.length < 5 ? 'h-450px' : ''">
 
 <!-- filters -->
 <app-searchcategory (clicked)="filterByCategory($event)"></app-searchcategory>
@@ -12,7 +12,7 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" >
 
   <div class="mt-5 mb-5"  *ngFor="let movie of movies" >
-    <app-deal-card [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)"></app-deal-card>
+    <app-deal-card [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)" (infoClicked)="openInfo($event)"></app-deal-card>
   </div>
 
 </div>

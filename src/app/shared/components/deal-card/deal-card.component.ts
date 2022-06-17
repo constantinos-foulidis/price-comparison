@@ -13,6 +13,7 @@ export class DealCardComponent implements OnInit {
    @Input() data:any
    @Output() clicked = new EventEmitter<MouseEvent>();
    @Output() reviewClicked = new EventEmitter<MouseEvent>();
+   @Output() infoClicked = new EventEmitter<MouseEvent>();
 
   constructor(private coreService: CoreService,private sStorage: SeessionStorageService) { }
 
@@ -59,8 +60,5 @@ export class DealCardComponent implements OnInit {
         this.sStorage.setItem('favorites',test.user.favorites);
      }
     })
-  }
-  openReview(){
-
   }
 }

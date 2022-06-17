@@ -1,0 +1,25 @@
+
+
+
+<div fxLayout="column" fxLayoutAlign="start stretch" >
+  <!-- <button class="close" mat-fab color="primary" aria-label="Example icon button with a delete icon"> -->
+
+  <!-- </button> -->
+
+  <img class="w-100 h-300px" src="assets/img/hero_banner.jpg" alt="movie_info_poster">
+  <div fxLayout="row" fxLayoutAlign="center center" >
+     <h1>{{data.Title}}</h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" >
+    <h3>{{data.Actors}}</h3>
+ </div>
+ <div fxLayout="row" fxLayoutAlign="center center"class="borderTop">
+  <mat-icon class="font-size-24">play</mat-icon>
+  <h1 class="review1 mr-5">Reviews</h1>
+</div>
+  <!-- <ng-template *ngIf="showCritics"> -->
+  <div  *ngFor="let test of critics">
+      <app-critics [data]="test"></app-critics>
+  </div>
+<!-- </ng-template> -->
+</div>

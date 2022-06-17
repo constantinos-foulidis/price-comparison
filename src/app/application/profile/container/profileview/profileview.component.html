@@ -25,7 +25,7 @@
        </div>
        <div class="w-100" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px">
         <div class="mt-5 mb-5"  *ngFor="let movie of likedMovies" >
-          <app-deal-card [hidden]="!movie.liked" [data]="movie" (clicked)="open($event)"></app-deal-card>
+          <app-deal-card [hidden]="!movie.liked" [data]="movie" (clicked)="open($event)" (reviewClicked)="openReview($event)" (infoClicked)="openInfo($event)"></app-deal-card>
         </div>
        </div>
 </div>

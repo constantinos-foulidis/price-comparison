@@ -33,6 +33,8 @@ import { VotechartComponent } from './components/votechart/votechart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SearchcategoryComponent } from './components/searchcategory/searchcategory.component';
+import { InfoComponent } from './components/info/info.component';
+import { CriticsComponent } from './components/critics/critics.component';
 
 
 
@@ -52,6 +54,8 @@ import { SearchcategoryComponent } from './components/searchcategory/searchcateg
     ReviewComponent,
     VotechartComponent,
     SearchcategoryComponent,
+    InfoComponent,
+    CriticsComponent,
 
   ],
   exports: [
@@ -69,7 +73,9 @@ import { SearchcategoryComponent } from './components/searchcategory/searchcateg
     VgBufferingModule,
     ReviewComponent,
     VotechartComponent,
-    SearchcategoryComponent
+    SearchcategoryComponent,
+    InfoComponent,
+    CriticsComponent
 
   ],
   imports: [

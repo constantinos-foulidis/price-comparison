@@ -5,6 +5,7 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MessageDialogComponent } from 'src/app/shared/components/message-dialog/message-dialog.component';
 import { PlayerComponent } from 'src/app/shared/components/player/player.component';
 import { ReviewComponent } from 'src/app/shared/components/review/review.component';
+import { InfoComponent } from 'src/app/shared/components/info/info.component';
 
 @Component({
   selector: 'app-search',
@@ -164,5 +165,29 @@ export class SearchComponent implements OnInit {
  }
  fillMovies(){
    this.movies = this.allmovies;
+ }
+ openInfo(data:any){
+  console.log(data);
+  if(this.sStorage.getItem('status') === 'true') {
+    console.log(data);
+   this.dialog.open(InfoComponent, {
+     data: data,
+     maxWidth: '70%',
+     maxHeight: '100%',
+     height: '100%',
+     width: '100%',
+     panelClass: ['full-screen-modal', 'mat-dialog-container','mt-3'],
+     hasBackdrop:true,
+
+   });
+  }else{
+   this.dialog.open(MessageDialogComponent, {
+     data: {
+       title: 'Info message',
+       message: 'In Order to see info you have to Sign in',
+     },
+     panelClass: [],
+   });
+  }
  }
 }

@@ -19,5 +19,6 @@
   <mat-icon  class="z-index" *ngIf="data.liked" (click)="removeMovies()">favorite</mat-icon>
 
     <mat-icon class="z-index"  (click)="reviewClicked.emit(data)">reviews</mat-icon>
+    <mat-icon class="z-index"  (click)="infoClicked.emit(data)">info</mat-icon>
 
 </mat-card>
